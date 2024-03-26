@@ -4,23 +4,19 @@ public class StudyError {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-        int sampleInt;
-        sampleInt = arr(3, 0);
-        System.out.println("戻り値 = " + sampleInt);
-    }
- 
-    public static int arr(int num1, int num2) {
         try {
-            int quotient = num1 / num2;
-            
-            return quotient;
- 
+            int result = divide(10, 0); 
+            System.out.println("結果: " + result);
         } catch (ArithmeticException e) {
-            System.out.println("例外が発生しました。");
-            System.out.println(e);
- 
-            return 0;
+            System.out.println("エラーが発生しました: 0で割ることはできません。");
         }
     }
- 
+
+    // 2つの整数の除算を行うメソッド。除算の結果を返す。
+    public static int divide(int numerator, int denominator) {
+        if (denominator == 0) {
+            throw new ArithmeticException("分母が0です。");
+        }
+        return numerator / denominator;
+    }
 }
