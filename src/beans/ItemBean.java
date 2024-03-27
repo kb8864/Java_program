@@ -2,7 +2,7 @@ package beans;
 
 import java.io.Serializable;
 
-public class itemBean implements Serializable {
+public class ItemBean implements Serializable {
 
 	//以下4行はカプセル化
 	private String itemID;//商品ID
