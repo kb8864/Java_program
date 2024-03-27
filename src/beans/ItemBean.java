@@ -10,6 +10,19 @@ public class ItemBean implements Serializable {
 	private int itemPrice;//商品価格
 	private int itemStock;//商品の在庫
 
+	//引数なしのコンストラクタの定義
+	public ItemBean() {
+	}//Item0.javaないの新しく作ったItemBeanクラスのインスタンス
+
+	//引数ありののコンストラクタの定義(ID,商品名、商品価格、商品の在庫)
+	public ItemBean(String itemID, String itemName, int itemPrice, int itemStock) {
+		//		引数で渡された値を、this句を使って受け取る
+		this.itemID = itemID;
+		this.itemName = itemName;
+		this.itemPrice = itemPrice;
+		this.itemStock = itemStock;
+	}
+
 	public String getItemID() {
 		return itemID;
 	}
