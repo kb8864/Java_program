@@ -24,10 +24,15 @@ public class ItemLogic {
 	}
 
 	//商品IDで商品指定して、その在庫を増量させるので、2つの変数を引数として扱う
-	public void updateStock(String itemID, int quantity) {
+	public void updateStock(String itemID, int quantity)throws Exception {
 		ItemBean itemBean = itemMap.get(itemID);
 		int newStock = itemBean.getItemStock() + quantity;
-
+		
+		//itemBeanのあたらしい在庫をセットする前に例外処理を記述する
+		if(newStock < 0 ) {
+			throw new Exception(itemID + "は在庫不足です");
+		}
+		
 		//itemBeanのあたらしい在庫をセットする
 		itemBean.setItemStock(newStock);
 		//新しいitemBeanをitemMapの中に追加する
