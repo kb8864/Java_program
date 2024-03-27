@@ -3,6 +3,7 @@ package controller;
 import java.util.ArrayList;
 
 import beans.ItemBean;
+import view.ItemView;
 
 public class Item1 {
 
@@ -21,18 +22,9 @@ public class Item1 {
 		itemList.add(itemBean2);
 		itemList.add(itemBean3);
 		
-		//	表示
-		System.out.println("------------------------------");
-		System.out.println("商品ID：商品名：商品価格：商品の在庫");
-		System.out.println("------------------------------");
+		// ItemViewに リスト管理されたオブジェクトを渡す
+		ItemView.itemView(itemList);
 		
-		//拡張for文で表示
-		for(ItemBean itemBean : itemList) {
-			System.out.print(itemBean.getItemID() + ":");
-			System.out.print(itemBean.getItemName() + ":");
-			System.out.print(itemBean.getItemPrice() + "円");
-			System.out.println(itemBean.getItemStock() + "個");
-		}
 		
 	}
 
