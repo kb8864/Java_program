@@ -1,0 +1,47 @@
+27-Mar-2024 18:41:24.374 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Serverのバージョン名:     Apache Tomcat/9.0.65
+27-Mar-2024 18:41:24.388 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Server ビルド:            Jul 14 2022 12:28:53 UTC
+27-Mar-2024 18:41:24.388 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log サーバーのバージョン番号: 9.0.65.0
+27-Mar-2024 18:41:24.389 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS 名:                    Mac OS X
+27-Mar-2024 18:41:24.389 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log OS バージョン:            14.2.1
+27-Mar-2024 18:41:24.391 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log アーキテクチャ:           x86_64
+27-Mar-2024 18:41:24.391 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:                /Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
+27-Mar-2024 18:41:24.392 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM バージョン:           21.0.2+13-LTS-58
+27-Mar-2024 18:41:24.392 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM ベンダ:               Oracle Corporation
+27-Mar-2024 18:41:24.393 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:            /Users/user/workspace/java/src/apache-tomcat-9.0.65
+27-Mar-2024 18:41:24.393 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:            /Users/user/workspace/java/src/apache-tomcat-9.0.65
+27-Mar-2024 18:41:24.553 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       --add-opens=java.base/java.lang=ALL-UNNAMED
+27-Mar-2024 18:41:24.553 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       --add-opens=java.base/java.io=ALL-UNNAMED
+27-Mar-2024 18:41:24.555 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       --add-opens=java.base/java.util=ALL-UNNAMED
+27-Mar-2024 18:41:24.555 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+27-Mar-2024 18:41:24.556 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+27-Mar-2024 18:41:24.556 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Djava.util.logging.config.file=/Users/user/workspace/java/src/apache-tomcat-9.0.65/conf/logging.properties
+27-Mar-2024 18:41:24.556 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+27-Mar-2024 18:41:24.557 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Djdk.tls.ephemeralDHKeySize=2048
+27-Mar-2024 18:41:24.558 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+27-Mar-2024 18:41:24.558 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+27-Mar-2024 18:41:24.559 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Dignore.endorsed.dirs=
+27-Mar-2024 18:41:24.559 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Dcatalina.base=/Users/user/workspace/java/src/apache-tomcat-9.0.65
+27-Mar-2024 18:41:24.560 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Dcatalina.home=/Users/user/workspace/java/src/apache-tomcat-9.0.65
+27-Mar-2024 18:41:24.560 情報 [main] org.apache.catalina.startup.VersionLoggerListener.log コマンドライン引数:       -Djava.io.tmpdir=/Users/user/workspace/java/src/apache-tomcat-9.0.65/temp
+27-Mar-2024 18:41:24.610 情報 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 商用環境に最適な性能を発揮する APR ベースの Tomcat ネイティブライブラリが java.library.path [/Users/user/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.] に存在しません。
+27-Mar-2024 18:41:26.302 情報 [main] org.apache.coyote.AbstractProtocol.init プロトコルハンドラ ["http-nio-8080"] を初期化します。
+27-Mar-2024 18:41:26.583 情報 [main] org.apache.catalina.startup.Catalina.load サーバーの初期化 [2974]ms
+27-Mar-2024 18:41:26.837 情報 [main] org.apache.catalina.core.StandardService.startInternal サービス [Catalina] を起動します
+27-Mar-2024 18:41:26.837 情報 [main] org.apache.catalina.core.StandardEngine.startInternal サーブレットエンジンの起動：[Apache Tomcat/9.0.65]
+27-Mar-2024 18:41:26.900 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/docs] を配備します
+27-Mar-2024 18:41:28.989 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory ディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/docs] の Web アプリケーションの配備は [2,071] ms で完了しました。
+27-Mar-2024 18:41:28.990 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/manager] を配備します
+27-Mar-2024 18:41:29.331 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory ディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/manager] の Web アプリケーションの配備は [340] ms で完了しました。
+27-Mar-2024 18:41:29.332 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/examples] を配備します
+27-Mar-2024 18:41:30.553 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory ディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/examples] の Web アプリケーションの配備は [1,220] ms で完了しました。
+27-Mar-2024 18:41:30.554 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/ROOT] を配備します
+27-Mar-2024 18:41:30.642 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory ディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/ROOT] の Web アプリケーションの配備は [87] ms で完了しました。
+27-Mar-2024 18:41:30.644 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory Webアプリケーションディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/host-manager] を配備します
+27-Mar-2024 18:41:30.743 情報 [main] org.apache.catalina.startup.HostConfig.deployDirectory ディレクトリ [/Users/user/workspace/java/src/apache-tomcat-9.0.65/webapps/host-manager] の Web アプリケーションの配備は [98] ms で完了しました。
+27-Mar-2024 18:41:30.760 情報 [main] org.apache.coyote.AbstractProtocol.start プロトコルハンドラー ["http-nio-8080"] を開始しました。
+27-Mar-2024 18:41:30.845 情報 [main] org.apache.catalina.startup.Catalina.start サーバーの起動 [4256]ms
+27-Mar-2024 18:44:11.153 情報 [main] org.apache.catalina.core.StandardServer.await 有効なシャットダウンコマンドがシャットダウンポート経由で受信されました。 サーバーインスタンスを停止します。
+27-Mar-2024 18:44:11.154 情報 [main] org.apache.coyote.AbstractProtocol.pause ProtocolHandler ["http-nio-8080"] を一時停止します。
+27-Mar-2024 18:44:11.165 情報 [main] org.apache.catalina.core.StandardService.stopInternal サービス [Catalina] を停止します
+27-Mar-2024 18:44:11.217 情報 [main] org.apache.coyote.AbstractProtocol.stop ProtocolHandler ["http-nio-8080"]の停止中
+27-Mar-2024 18:44:11.228 情報 [main] org.apache.coyote.AbstractProtocol.destroy ProtocolHandler ["http-nio-8080"] を破棄します。
