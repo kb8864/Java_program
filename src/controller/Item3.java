@@ -27,7 +27,13 @@ public class Item3 {
 		itemLogic.putItem(itemBean1);
 		itemLogic.putItem(itemBean2);
 		itemLogic.putItem(itemBean3);
-
+		
+		//商品2の在庫を試しに500個に増やす
+		itemLogic.updateStock("002", 500);
+		
+		//商品3の在庫を400個減らす
+		itemLogic.updateStock("003", -400);
+		
 		//ItemLogicを使って登録したものをItemViewにHashMapを使って渡す
 		HashMap<String, ItemBean> itemMap = itemLogic.getItemMap();
 
