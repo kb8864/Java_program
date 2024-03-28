@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-  <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+ <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -12,7 +12,7 @@
   </head>
   <body>
     <h1>登録確認画面</h1>
-    <form action="RegisterComplete.html" method="post">
+    <form action="RegisterComplete" method="post">
       <fieldset>
         <legend>商品を確認してください</legend>
         <div class="con">
