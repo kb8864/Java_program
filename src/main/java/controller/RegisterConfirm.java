@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import beans.ItemBean;
+
 /**
  * Servlet implementation class RegisterConfirm
  */
@@ -37,6 +39,13 @@ public class RegisterConfirm extends HttpServlet {
 		System.out.println("商品ID：商品名：価格");
 		System.out.println(itemID + "：" + itemName + "：" + itemPrice + "円");      
 		request.getRequestDispatcher("/WEB-INF/RegisterConfirm.jsp").forward(request, response);
+		
+		ItemBean itemBean = new ItemBean(itemID,itemName, itemPrice);
+		
+		request.setAttribute("itemBean", itemBean);
+		
+		request.getRequestDispatcher("/WEB-INF/RegisterConfirm.jsp").forward(request, response);
+
 	}
 
 	/**
