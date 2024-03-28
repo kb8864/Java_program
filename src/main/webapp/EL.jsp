@@ -10,6 +10,22 @@
 </head>
 <body>
 	<h1>EL式とJSTL(カスタムタグ)</h1>
+
+	<%@ page import="beans.*"%>
+	<%
+	  ItemBean itemBean = new ItemBean("001", "商品1", 5500);
+	  request.setAttribute("itemBean", itemBean);
+  %>
+
+	<hr>
+	商品ID：
+	<c:out value="${itemBean.itemID}" />
+	<br> 商品名：
+	<c:out value="${itemBean.itemName}" />
+	<br> 価格：
+	<fmt:formatNumber value="${itemBean.itemPrice}" />
+	<hr>
+
 	<p>ID(EL式):${param.id}</p>
 	<p>
 		ID(JSTL使用)：
