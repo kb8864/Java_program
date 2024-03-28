@@ -27,6 +27,15 @@ public class RegisterConfirm extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		//requestオブジェクトからパラメータを取得
+		String itemID = request.getParameter("itemID");
+		String itemName = request.getParameter("itemName");
+		int itemPrice = Integer.parseInt(request.getParameter("itemPrice"));
+
+		System.out.println("商品ID：商品名：価格");
+		System.out.println(itemID + "：" + itemName + "：" + itemPrice + "円");      
 		request.getRequestDispatcher("/WEB-INF/RegisterConfirm.jsp").forward(request, response);
 	}
 
