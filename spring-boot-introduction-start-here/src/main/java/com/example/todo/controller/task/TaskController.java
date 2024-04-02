@@ -9,11 +9,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class TaskController {
     private final TaskService taskService = new TaskService();
+
     @GetMapping("/tasks")
 
-    public String list(Model model){
+    public String list(Model model) {
+        var taskList = taskService.find()
+                .stream()
+                .map(TaskDTO::toDTO)
+                    .toList();
 
-        model.addAttribute("taskList",taskService.find());
+        model.addAttribute("taskList", taskList);
         return "tasks/list";
     }
 }
