@@ -5,12 +5,11 @@
       layout:decorate="~{layout/layout}">
 
 <head>
-    <title>タスク詳細ページ</title>
+    <title>タスク詳細画面</title>
 </head>
 <body>
 <section layout:fragment="content">
-    <h1>タスク詳細</h1>
-    <a th:href="@{/tasks}">タスク一覧ページへ</a>
+
     <div th:object="${task}">
         <h2 th:text="'#'+ *{id} + ' ' + *{summary}"></h2>
         <p th:text="*{status} "></p>

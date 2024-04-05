@@ -5,15 +5,16 @@
       layout:decorate="~{layout/layout}">
 >
 <head>
-    <title>トップページ</title>
+    <title>404</title>
 </head>
 <body>
 
 <section layout:fragment="content">
- <div class="text-center">
-     <h1 class="h1">タスク管理ができるミニアプリです</h1>
-     <p>タスク一覧画面をクリックしてタスク管理を始めてください</p>
- </div>
+    <div class="text-center">
+        <h1 class="display-1">404 Not Found</h1>
+        <p>お探しのページは見つかりません</p>
+        <a th:href="@{/}" class="btn btn-primary mt-3">トップページに戻る</a>
+    </div>
 </section>
 
 
