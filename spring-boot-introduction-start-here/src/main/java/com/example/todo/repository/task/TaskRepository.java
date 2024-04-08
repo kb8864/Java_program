@@ -18,8 +18,8 @@ public interface TaskRepository {
     Optional <TaskEntity> selectById(@Param("taskId") long taskId);
 
     @Insert("""
-                VALUES (#{task.summary}, #{task.description}, #{task.status})
-INSERT INTO tasks (summary, description, status) 
+        INSERT INTO tasks (summary, description, status)
+        VALUES (#{task.summary}, #{task.description}, #{task.status})
         """)
-    void insert(@Param("task")TaskEntity newEntity);
+         void insert(@Param("task")TaskEntity newEntity);
 }
