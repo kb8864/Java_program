@@ -9,7 +9,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">ToDo App</titlelayout>
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">ToDo App</title>
 
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
 </head>
@@ -17,9 +17,16 @@
 <script th:href="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
 
 <div class="container">
-    <header>header領域</header>
+    <nav class="navbar navbar-expand bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/}">ToDo</a>
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
+                <a class="nav-link" th:href="@{/tasks}">タスク一覧</a>
+            </div>
+        </div>
+    </nav>
     <section layout:fragment="content"></section>
-    <footer>footer領域</footer>
 </div>
 </body>
 </html>
