@@ -1,23 +1,25 @@
 package com.example.todo.controller.task;
 
-import com.example.todo.service.task.TaskEntity;
 import com.example.todo.service.task.TaskService;
-import com.example.todo.service.task.TaskStatus;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
+@RequestMapping("/tasks")
 
 
 public class TaskController {
     private final TaskService taskService;
 
-    @GetMapping("/tasks")
+    @GetMapping
 
     public String list(Model model) {
         var taskList = taskService.find()
@@ -30,7 +32,7 @@ public class TaskController {
         return "tasks/list";
     }
 
-    @GetMapping("/tasks/{id}")
+    @GetMapping("/{id}")
     public String showDetail(@PathVariable("id") Long taskId,Model model){
 
         model.addAttribute("taskId", taskId);
@@ -39,15 +41,26 @@ public class TaskController {
             model.addAttribute("task",TaskDTO.toDTO(taskEntity));
         return  "tasks/detail";
     }
-    @GetMapping("/tasks/creationForm")
-    public String showCreateForm(){
+    @GetMapping("/creationForm")
+    public String showCreateForm(TaskForm form){
         return "tasks/form";
     }
 
-    @PostMapping("/tasks")
-    public String create(TaskForm form, Model model){
-        var newEntity = new TaskEntity(null, form.summary(), form.description(), TaskStatus.valueOf(form.status()));
-        taskService.create(newEntity);
-        return list(model);
+    @PostMapping
+    public String create(@Validated TaskForm form, BindingResult bindingResult){
+        if (bindingResult.hasErrors()){
+            return showCreateForm(form);
+        }
+        form.toEntity();
+        taskService.create(form.toEntity());
+        return "redirect:/tasks";
+    }
+    @GetMapping("/{id}/editForm")
+    public String showEditForm(@PathVariable("id") long id, Model model){
+        var taskEntity =  taskService.findById(id)
+                        .orElseThrow(() -> new IllegalArgumentException("Task not Found"));
+        var form = new TaskForm(taskEntity.summary(), taskEntity.description(), taskEntity.status().name());
+        model.addAttribute("taskForm", form);
+        return "tasks/form";
     }
 }
